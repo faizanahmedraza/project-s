@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);
+html,
+body {
+  background-color: black;
+  background-size: cover;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+}
+
+input[type=email],
+input[type=password]
+{
+  background: transparent!important;
+  color: #fff;
+  font-size: 26px;
+  border-radius: 0%!important;
+  border-bottom: 1px solid #fff!important;
+  outline: none!important;
+}
+
+input[type=submit]{
+  background: transparent!important;
+  cursor: pointer;
+  color: #fff;
+  font-size: 26px;
+  outline: none!important;
+
+}
+
+input:focus,
+span:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  box-shadow: none!important;
+}
+
+
+span {
+  background: transparent!important;
+  cursor: pointer;
+  color: #fff;
+  font-size: 26px;
+}
+
