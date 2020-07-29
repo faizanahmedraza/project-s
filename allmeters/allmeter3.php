@@ -55,6 +55,39 @@
             border-radius: 50%;
             filter: blur(4px);
         }
+
+        .dot.blink {
+            -webkit-animation: blink-animation 1.5s infinite;
+            animation: blink-animation 2s infinite;
+        }
+
+        @-webkit-keyframes blink-animation {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes blink-animation {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
     </style>
     <title>Document</title>
 </head>
@@ -65,8 +98,8 @@
             <div class="col-lg-3 col-md-2 col-sm-0 col-0"></div>
             <div class="col-lg-6 col-md-8 col-sm-12 col-12 bkground">
                 <nav class="navbar p-0 m-0">
-                    <a href="../home.php"><i style="font-size: 40px!important; color:white" class="material-icons-outlined coloricon float-left">keyboard_arrow_left</i> </a>
-                    <span style="font-weight:bold!important;" class="d-flex justify-content-center">ALL Meters</span>
+                    <a href="../home.php"><i style="font-size: 54px!important; color:white" class="material-icons-outlined coloricon float-left">keyboard_arrow_left</i> </a>
+                    <span style="font-weight:bold!important;" class="d-flex justify-content-center">All Meters</span>
                     <button class="d-flex justify-content-end" type="button">
                         <img id="icon-image" src="../images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('settings.php')"> </button>
                     </button>
@@ -76,40 +109,40 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide active">
                             <button type="button">
-                                <h4 class="meters text-white">Meter3</h4>
+                                <h4 class="meters text-white">Meter 3</h4>
                             </button>
                         </div>
                         <div class="swiper-slide active">
                             <button type="button">
-                                <h4 class="meters text-white">Meter4</h4>
+                                <h4 class="meters text-white">Meter 4</h4>
                             </button>
                         </div>
                         <div class="swiper-slide active">
                             <button type="button">
-                                <h4 class="meters text-white">Meter5</h4>
+                                <h4 class="meters text-white">Meter 5</h4>
                             </button>
                         </div>
                         <div class="swiper-slide active">
                             <button type="button">
-                                <h4 class="meters text-white">Meter1</h4>
+                                <h4 class="meters text-white">Meter 1</h4>
                             </button>
                         </div>
                         <div class="swiper-slide active">
                             <button type="button">
-                                <h4 class="meters text-white">Meter2</h4>
+                                <h4 class="meters text-white">Meter 2</h4>
                             </button>
                         </div>
                     </div>
                 </div>
                 <div class="card mt-1" style="background: transparent;">
                     <div class="car-body mx-auto">
-                        <div id="light" class="dot"></div>
+                        <div id="light" class="dot blink"></div>
                     </div>
                 </div>
 
-                <div class="card text-center mt-4 mx-auto" style="width: 80%; height: 200px; background-color:#101E4B">
+                <div class="card text-center mt-4 mx-auto" style="width: 80%; height: 200px; background-color: #041a24;">
                     <div class="card-body m-0 p-0">
-                        <a href="../voltage.php" style="font-size: 64px; text-decoration:none; padding-bottom:0%"><strong>252</strong><sub>kwh</sub></a>
+                        <a href="../voltage.php" style="font-size: 64px; color: #26b5e3; text-decoration:none; padding-bottom:0%"><strong>252</strong><sub>kwh</sub></a>
                         <p class="text mb-0" style="font-size: 36px; font-weight:bold">LAST 1-MONTH </p>
                         <p><span class="text pt-0" style="font-size: 18px; font-weight:lighter">click for details</span></p>
 
@@ -118,7 +151,7 @@
 
                 <div class="card mt-4" style="background: transparent;">
                     <div class="car-body mx-auto">
-                        <div class="text">Rp. 122k</div>
+                        <div class="text" style="font-size: 38px;">Rp. 122k</div>
                     </div>
                 </div>
             </div>
@@ -131,7 +164,7 @@
             <nav class="navbar d-flex justify-content-center">
                 <a href="../home.php" class="pl-0 icon-image1"><img src="../images/4.png" height="48px" width="48px" alt=""></a>
                 <a href="../search/finddata.php" class="icon-image2" style="padding-left: 40px;"><img src="../images/7.png" height="48px" width="48px" alt=""></a>
-                <a href="" class="icon-image3" style="padding-left: 40px;"><img src="../images/9.png" height="48px" width="48px" alt=""></a>
+                <a href="../graphBuilder/meter2.php" class="icon-image3" style="padding-left: 40px;"><img src="../images/9.png" height="48px" width="48px" alt=""></a>
                 <a href="../notifications.php" class="icon-image4" style="padding-left: 40px;"><img src="../images/11.png" height="48px" width="48px" alt=""></a>
             </nav>
         </div>

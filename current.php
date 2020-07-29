@@ -57,6 +57,39 @@
             filter: blur(4px);
         }
 
+        .dot.blink {
+            -webkit-animation: blink-animation 1.5s infinite;
+            animation: blink-animation 1.5s infinite;
+        }
+
+        @-webkit-keyframes blink-animation {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes blink-animation {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
         div.card-body {
             padding-bottom: 20px !important;
             padding-top: 5px !important;
@@ -71,7 +104,7 @@
             <div class="col-lg-3 col-md-2 col-sm-0 col-0"></div>
             <div class="col-lg-6 col-md-8 col-sm-12 col-12 bkground">
                 <nav class="navbar p-0 m-0">
-                    <a href="allmeters/allmeter1.php"><i style="font-size: 40px!important; color:white" class="material-icons-outlined coloricon float-left">keyboard_arrow_left</i> </a>
+                    <a href="allmeters/allmeter1.php"><i style="font-size: 54px!important; color:white" class="material-icons-outlined coloricon float-left">keyboard_arrow_left</i> </a>
                     <span style="font-weight:bold!important;" class="d-flex justify-content-center font-weight-bold">Meter2</span>
                     <button class="d-flex justify-content-end" type="button">
                         <img id="icon-image" src="images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('settings.php')">
@@ -102,17 +135,12 @@
                         </div>
                         <div class="swiper-slide active">
                             <button type="button">
-                                <h4 class="meters text-white">VHarm.</h4>
+                                <h4 class="meters text-white">V Harm.</h4>
                             </button>
                         </div>
                         <div class="swiper-slide active">
                             <button type="button">
-                                <h4 class="meters text-white">HHarm.</h4>
-                            </button>
-                        </div>
-                        <div class="swiper-slide active">
-                            <button type="button">
-                                <h4 class="meters text-white">IHarm.</h4>
+                                <h4 class="meters text-white">I Harm.</h4>
                             </button>
                         </div>
                         <div class="swiper-slide active">
@@ -125,7 +153,7 @@
                 <div class="container" style="background:fixed; z-index:5;">
                     <div class="card mt-2" style="background: black;">
                         <div class="car-body mx-auto">
-                            <div id="light" class="dot"></div>
+                            <div id="light" class="dot blink"></div>
                         </div>
                     </div>
                 </div>
@@ -133,7 +161,7 @@
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-6 col-md-4">
-                            <div class="card" style="width: 175px; height: 160px; background-color:#101E4B;">
+                            <div class="card" style="width: 175px; height: 160px; background-color:#041a24;">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="font-weight-bold" style="font-size: 42px; padding-top:0px;">R</div>
@@ -145,7 +173,7 @@
                             </div>
                         </div>
                         <div class="col-6 col-md-4">
-                            <div class="card" style="width: 175px; height: 160px; background-color:#101E4B;">
+                            <div class="card" style="width: 175px; height: 160px; background-color:#041a24;">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="font-weight-bold" style="font-size: 42px; padding-top:0px;">S</div>
@@ -162,7 +190,7 @@
                     <div class="row mt-3">
                         <div class="col-md-2"></div>
                         <div class="col-6 col-md-4">
-                            <div class="card" style="width: 175px; height: 160px; background-color:#101E4B;">
+                            <div class="card" style="width: 175px; height: 160px; background-color:#041a24;">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="font-weight-bold" style="font-size: 42px; padding-top:0px;">T</div>
@@ -174,7 +202,7 @@
                             </div>
                         </div>
                         <div class="col-6 col-md-4">
-                            <div class="card" style="width: 175px; height: 160px; background-color:#101E4B;">
+                            <div class="card" style="width: 175px; height: 160px; background-color:#041a24;">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="font-weight-bold" style="font-size: 42px; padding-top:0px;">N</div>
@@ -190,7 +218,7 @@
                     <div class="row mt-3">
                         <div class="col-4"></div>
                         <div class="col-4">
-                            <div class="card" style="width: 175px; height: 160px; background-color:#101E4B;">
+                            <div class="card" style="width: 175px; height: 160px; background-color:#041a24;">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="font-weight-bold" style="font-size: 26px; padding-top:15px;">Unbalance</div>

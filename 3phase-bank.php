@@ -96,23 +96,23 @@
                 datasets: [{
                     label: "R",
                     data: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>,
-                    borderColor: 'blue',
-                    borderWidth: 1,
-                    pointBackgroundColor: "blue",
+                    borderColor: '#2a4a84',
+                    borderWidth: 2,
+                    radius: 0,
                     fill: false
                 }, {
                     label: "S",
                     data: <?php echo json_encode($dataPoints1, JSON_NUMERIC_CHECK); ?>,
-                    borderColor: "white",
-                    borderWidth: 1,
-                    pointBackgroundColor: "white",
+                    borderColor: "#d77a3c",
+                    borderWidth: 2,
+                    radius: 0,
                     fill: false
                 }, {
                     label: "T",
                     data: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>,
-                    borderColor: "orange",
-                    borderWidth: 1,
-                    pointBackgroundColor: "orange",
+                    borderColor: "#8d8d8d",
+                    borderWidth: 2,
+                    radius: 0,
                     fill: false
                 }]
             },
@@ -132,21 +132,29 @@
                 },
                 scales: {
                     yAxes: [{
+                        offset: false,
+                        gridLines: {
+                            Color: "#434343",
+                            gridLineWidth: 1
+                        },
                         ticks: {
                             autoSkip: true,
                             beginAtZero: false,
                             stepSize: 200,
                             min: -400,
                             max: 400,
-                            fontSize: 24,
+                            fontSize: 18,
                             fontFamily: "'Montserrat', sans-serif",
                             fontColor: 'rgb(255,255,255)'
                         }
                     }],
                     xAxes: [{
+                        gridLines: {
+                            Color: "#434343",
+                            gridLineWidth: 1
+                        },
                         ticks: {
                             beginAtZero: false,
-                            fontSize: 24,
                             fontFamily: "'Montserrat', sans-serif",
                             fontColor: 'rgb(255,255,255)'
                         }

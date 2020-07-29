@@ -16,7 +16,7 @@
         }
 
         button {
-            background-color: transparent!important;
+            background-color: transparent !important;
             border: none !important;
             outline: none !important;
             box-shadow: none !important;
@@ -29,8 +29,8 @@
 <body>
     <nav class="navbar p-0 m-0">
         <div class="container">
-            <a href="allcaps.php"><i style="font-size: 40px!important; color:white" class="material-icons-outlined coloricon float-left">keyboard_arrow_left</i> </a>
-            <span style="font-weight:bold!important;" class="d-flex justify-content-center">Bank3</span>
+            <a href="allcaps.php"><i style="font-size: 54px!important; color:white" class="material-icons-outlined coloricon float-left">keyboard_arrow_left</i> </a>
+            <span style="font-size: 30px; font-weight:bold!important;" class="d-flex justify-content-center">Bank3</span>
             <button class="navbar-toggler d-flex justify-content-end" type="button">
                 <img id="icon-image" src="../images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('settings.php')"> </button>
             </button>
@@ -38,16 +38,16 @@
     </nav>
 
     <div class="container">
-        <div class="text-center font-weight-bold mt-2">
-            <h3>Capacitors</h3>
+        <div class="text-center mt-3 mb-4">
+            <h5 class="font-weight-bold">Capacitors</h5>
         </div>
         <div class="row">
             <div class="col-3 col-md-4 p-0">
                 <span class="float-right"> Step 1</span>
             </div>
             <div class="col-6 col-md-4">
-                <div class="progress mt-1">
-                    <div class="progress-bar bg-success progress-bar-striped progress1"></div>
+                <div class="progress mt-1" style="background-color: #221e20;">
+                    <div class="progress-bar progress-bar-striped progress1" style="background-color: #3b9e43!important;"></div>
                 </div>
             </div>
             <div class="col-3 col-md-4 d-inline-flex">
@@ -59,8 +59,8 @@
                 <span class="float-right"> Step 2</span>
             </div>
             <div class="col-6 col-md-4">
-                <div class="progress mt-1">
-                    <div class="progress-bar bg-success progress-bar-striped progress2"></div>
+                <div class="progress mt-1" style="background-color: #221e20;">
+                    <div class="progress-bar progress-bar-striped progress2" style="background-color: #3b9e43!important;"></div>
                 </div>
             </div>
             <div class="col-3 col-md-4 d-inline-flex">
@@ -72,8 +72,8 @@
                 <span class="float-right"> Step 3</span>
             </div>
             <div class="col-6 col-md-4">
-                <div class="progress mt-1">
-                    <div class="progress-bar bg-success progress-bar-striped progress3"></div>
+                <div class="progress mt-1" style="background-color: #221e20;">
+                    <div class="progress-bar progress-bar-striped progress3" style="background-color: #3b9e43!important;"></div>
                 </div>
             </div>
             <div class="col-3 col-md-4 d-inline-flex">
@@ -81,8 +81,8 @@
             </div>
         </div>
 
-        <div class="text-center font-weight-bold mt-4">
-            <h3>Contactors</h3>
+        <div class="text-center mt-4 mb-4">
+            <h5 class="font-weight-bold">Contactors</h5>
         </div>
 
         <div class="row">
@@ -90,8 +90,8 @@
                 <span class="float-right"> Step 1</span>
             </div>
             <div class="col-6 col-md-4">
-                <div class="progress mt-1">
-                    <div class="progress-bar bg-success progress-bar-striped progress-1"></div>
+                <div class="progress mt-1" style="background-color: #221e20;">
+                    <div class="progress-bar progress-bar-striped progress-1" style="background-color: #3b9e43!important;"></div>
                 </div>
             </div>
             <div class="col-3 col-md-4 d-inline-flex">
@@ -103,8 +103,8 @@
                 <span class="float-right"> Step 2</span>
             </div>
             <div class="col-6 col-md-4">
-                <div class="progress mt-1">
-                    <div class="progress-bar bg-success progress-bar-striped progress-2"></div>
+                <div class="progress mt-1" style="background-color: #221e20;">
+                    <div class="progress-bar progress-bar-striped progress-2" style="background-color: #3b9e43!important;"></div>
                 </div>
             </div>
             <div class="col-3 col-md-4 d-inline-flex">
@@ -116,8 +116,8 @@
                 <span class="float-right"> Step 3</span>
             </div>
             <div class="col-6 col-md-4">
-                <div class="progress mt-1">
-                    <div class="progress-bar bg-success progress-bar-striped progress-3" aria-valuenow="57%" aria-valuemin="0" aria-valuemax="57"></div>
+                <div class="progress mt-1" style="background-color: #221e20;">
+                    <div class="progress-bar progress-bar-striped progress-3" style="background-color: #3b9e43!important;"></div>
                 </div>
             </div>
             <div class="col-3 col-md-4 d-inline-flex">

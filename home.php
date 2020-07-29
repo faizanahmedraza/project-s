@@ -39,7 +39,6 @@
         }
 
         .card {
-            background-color: #101E4B !important;
             height: 160px !important;
             width: 260px;
             border: none !important;
@@ -64,12 +63,6 @@
         .card-header {
             height: 160px;
         }
-
-        
-        canvas {
-            /* width: 100%; */
-            height: 280px !important;
-        }
     </style>
     <title>Home-Dashboard</title>
 </head>
@@ -80,22 +73,22 @@
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="card">
+                    <div class="card" style="background-color: #020c12;">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-lg-7 col-7">
-                                    <div class="pl-2 ml-2" style="color: lightseagreen; font-size:30px;">kwh</div>
-                                    <div class="pl-2 ml-2">Rp.23k</div>
+                                    <div class="pl-2 ml-2" style="color: #125a70; font-size:26px;">kVARh</div>
+                                    <div class="pl-2 ml-2" style="color:#7e7e7e;">Rp.10k</div>
                                 </div>
                                 <div class="col-lg-5 col-5">
-                                    <a href="" style="color:white!important;"><img src="images/1.png" height="76px" width="76px" class="mr-3 pt-2" alt=""></a>
+                                    <a href="" style="color:#125a70!important;"><img src="images/1.png" height="76px" width="76px" class="mr-3 pt-2" alt=""></a>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="container text-center">
                                     <div class="d-flex flex-column">
-                                        <div id="10" class="justify-content-center"><b>HARM. FILTERS</b></div>
-                                        <div class="justify-content-center" style=" font-size:18px;">no filters connected</div>
+                                        <div id="10" class="justify-content-center" style="color:#7e7e7e;"><b>HARM. FILTERS</b></div>
+                                        <div class="justify-content-center" style=" font-size:18px; color: #383a3c;">no filters connected</div>
                                     </div>
                                 </div>
                             </div>
@@ -103,12 +96,12 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="card" id="100">
+                    <div class="card" id="100" style="background-color: #041a24 !important;">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-lg-7 col-7">
-                                    <div class="pl-2 ml-2" style="color: lightseagreen; font-size:30px;">kwh</div>
-                                    <div class="pl-2 ml-2">Rp.23k</div>
+                                    <div class="pl-2 ml-2 font-weight-bold" style="color: #26b5e3; font-size:26px; letter-spacing: 3px;">kWh</div>
+                                    <div class="pl-2 ml-2 font-weight-bold" style="letter-spacing: 2px;">Rp. 231k</div>
                                 </div>
                                 <div class="col-lg-5 col-5">
                                     <a href="allmeters/allmeter1.php" style="color:white!important;"><img src="images/2.png" height="76px" width="76px" class="mr-3 pt-2" alt=""></a>
@@ -118,7 +111,7 @@
                                 <div class="container text-center">
                                     <div class="d-flex flex-column">
                                         <div class="justify-content-center"><b>Meters</b></div>
-                                        <div class="justify-content-center" style=" font-size:18px;">no meters connected</div>
+                                        <div class="justify-content-center" style=" font-size:18px; color:#70747a;">5 meters connected</div>
                                     </div>
                                 </div>
                             </div>
@@ -126,22 +119,22 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="card">
+                    <div class="card" style="background-color: #020c12;">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-lg-7 col-7">
-                                    <div class="pl-2 ml-2" style="color: lightseagreen; font-size:30px;">kwh</div>
-                                    <div class="pl-2 ml-2">Rp.23k</div>
+                                <div class="pl-2 ml-2" style="color: #125a70; font-size:26px;">kVARh</div>
+                                    <div class="pl-2 ml-2" style="color:#7e7e7e;">Rp.13k</div>
                                 </div>
                                 <div class="col-lg-5 col-5">
-                                    <a href="allcaps/allcaps.php" style="color:white!important;"><img src="images/3.png" height="76px" width="76px" class="mr-3 pt-2" alt=""></a>
+                                    <a href="allcaps/allcaps.php" style="color:#125a70!important;"><img src="images/3.png" height="76px" width="76px" class="mr-3 pt-2" alt=""></a>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="container text-center">
                                     <div class="d-flex flex-column">
-                                        <div id="30" class="justify-content-center"><b>CAP. BANKS</b></div>
-                                        <div class="justify-content-center" style=" font-size:18px;">no banks connected</div>
+                                        <div id="30" class="justify-content-center" style="color:#7e7e7e;"><b>CAP. BANKS</b></div>
+                                        <div class="justify-content-center" style=" font-size:18px; color: #383a3c;">5 banks connected</div>
                                     </div>
                                 </div>
                             </div>
@@ -150,8 +143,8 @@
                 </div>
             </div>
         </div>
-        <h4 class="ml-3 ml-md-0">Energy Cost</h4>
-        <canvas id="myChart" style="height:270px; width:500px"></canvas>
+        <div class="ml-3 ml-md-0 mb-2 font-weight-bold" style="font-size: 30px;">Energy Cost</div>
+        <canvas id="myChart" class="w-100" style="height:270px!important; font-size:18px!important"></canvas>
     </div>
 
 
@@ -195,10 +188,9 @@
         <?php
 
         $dataPoints = array(
-            array("y" => "", "label" => "0"),
             array("y" => 0, "label" => "Feb"),
-            array("y" => 0, "label" => "Mar"),
-            array("y" => 0, "label" => "Apr"),
+            array("y" => 115, "label" => "Mar"),
+            array("y" => 231, "label" => "Apr"),
         );
         ?>
 
@@ -206,7 +198,7 @@
         var myChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ['', 'Feb', 'Mar', 'Apr'],
+                labels: ['Feb', 'Mar', 'Apr'],
                 datasets: [{
                     label: "Energy Cost",
                     data: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>,
@@ -214,12 +206,16 @@
                         'rgb(0,0,0)',
                         'rgb(0,0,0)'
                     ],
-                    pointBackgroundColor: "rgb(0,128,128)",
-                    borderColor: 'rgb(0,128,128)',
-                    borderWidth: 3
+                    lineTension: 0,
+                    pointBackgroundColor: "#26b5e3",
+                    borderColor: "#26b5e3",
+                    radius: 1,
+                    borderWidth: 2,
+                    fill: false
                 }]
             },
             options: {
+                bezierCurve : false,
                 layout: {
                     padding: {
                         left: 20,
@@ -231,6 +227,14 @@
                 legend: {
                     display: false,
                 },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
                 scales: {
                     yAxes: [{
                         ticks: {
@@ -239,15 +243,19 @@
                             stepSize: 100,
                             min: 0,
                             max: 300,
-                            fontSize: 24,
+                            fontSize: 18,
                             fontFamily: "'Montserrat', sans-serif",
                             fontColor: 'rgb(255,255,255)'
                         }
                     }],
                     xAxes: [{
+                        offset: true,
                         ticks: {
-                            beginAtZero: false,
-                            fontSize: 24,
+                            autoSkip: true,
+                            minRotation: 0,
+                            maxRotation: 50,
+                            padding: 0,
+                            fontSize: 18,
                             fontFamily: "'Montserrat', sans-serif",
                             fontColor: 'rgb(255,255,255)'
                         }

@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $showError = true;
   }
-} 
+}
 
 
 
@@ -50,6 +50,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       width: 100%;
       height: 700px;
     }
+    .form-control {
+      background-color: transparent !important;
+      color: white;
+      border: none;
+      border-radius: 0% !important;
+      border-bottom: 1px solid #fff !important;
+      outline: none !important;
+      box-shadow: none;
+      text-shadow: none;
+    }
+    .form-control:focus {
+      background-color: transparent !important;
+      color: white;
+      border: none;
+      border-radius: 0% !important;
+      border-bottom: 1px solid #fff !important;
+      outline: none !important;
+      box-shadow: none;
+      text-shadow: none;
+    }
+    input[type=email],
+    input[type=email]:focus,
+    input[type=email]:visited,
+    input[type=email]:valid{
+      background-color: transparent!important;
+      color: white;
+      border: none;
+      border-radius: 0% !important;
+      border-bottom: 1px solid #fff !important;
+      outline: none !important;
+      box-shadow: none!important;
+      text-shadow: none;
+      text-decoration: none;
+    }
+
+
+
   </style>
   <title>Document</title>
 </head>
@@ -65,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </div>';
   } else if ($showError) {
     echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-    <strong>Error!</strong> ' . $showError . '
+    <strong>Error!</strong> Username and Passcode are incorrect..
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -82,12 +119,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <h1 class="text-center text-white mt-5" style="font-size:28px; font-stretch: ultra-expanded!important; letter-spacing: 7px; white-space: nowrap;">LET'S GET STARTED</h1>
           <form class="form-group" action="" method="POST">
 
-            <input type="email" name="email" class="form-control border-0 mt-4" placeholder="Email">
+            <input id="email" type="email" name="email" class="form-control border-0 mt-4" placeholder="Email" autocomplete="off">
             <br>
             <div class="input-group">
-              <input type="password" name="passcode" class="form-control border-0 mt-1" id="password-id" placeholder="Passcode">
+              <input type="text" name="passcode" class="form-control border-0" id="password-id" style="font-size:28px;" placeholder="Passcode">
               <div class="input-group-append">
-                <span id="span" class="input-group-text border-left-0 border-right-0 border-top-0 rounded-0"><i id="pass-status" class="material-icons-outlined text-white" onclick="showHidePwd()">visibility_off</i></span>
+                <span id="span" class="input-group-text border-left-0 border-right-0 border-top-0 rounded-0 text-white" style=" border-bottom: 1px solid #fff;"><i id="pass-status" class="material-icons-outlined" style="text-decoration:none; " onclick="showHidePwd()">visibility_off</i></span>
               </div>
             </div>
             <br>
@@ -108,12 +145,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if (pass.type === "password") {
         pass.type = "text";
         document.getElementById("pass-status").innerHTML = "visibility";
-        document.getElementById("password-id").style.background = "#E8F0FE";
-        document.getElementById("password-id").style.borderRadius = "0px";
+        document.getElementById("password-id").style.background = "transparent";
       } else {
         pass.type = "password";
         document.getElementById("pass-status").innerHTML = "visibility_off";
-        document.getElementById("pass-status").style.fontSize = "26px";
+        document.getElementById("password-id").style.background = "transparent";
       }
     }
   </script>

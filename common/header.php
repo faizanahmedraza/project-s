@@ -29,14 +29,14 @@
 <body>
     <nav class="navbar" style="padding-bottom: 0px!important; background-color:black; z-index:10">
         <div class="container">
-            <span style="font-weight:bold!important;" class="d-flex justify-content-start ">Home Dashboard</span>
+            <span style="font-weight:bold!important;" class="d-flex align-items-end">Home Dashboard</span>
             <button id="image" class="d-flex justify-content-end" type="button">
                 <img id="icon-image" src="images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('settings.php');">
             </button>
         </div>
     </nav>
-    <div class="container">
-        <a href="" class="ml-3 ml-md-0 ml-lg-0" style="padding-top: 0px!important; text-decoration: none!important;" class="">PT KUI</a>
+    <div class="container mt-0 pt-0">
+        <a href="" class="ml-3 ml-md-0 ml-lg-0 no-gutters" style="padding-top: 0px!important; font-size:30px; color: #26b5e3; text-decoration: none!important;" class="pt-0 mt-0">PT KUI</a>
     </div>
 </body>
 

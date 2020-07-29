@@ -71,6 +71,39 @@
             border-radius: 50%;
             filter: blur(4px);
         }
+
+        .dot.blink {
+            -webkit-animation: blink-animation 1.5s infinite;
+            animation: blink-animation 1.5s infinite;
+        }
+
+        @-webkit-keyframes blink-animation {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes blink-animation {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
     </style>
     <title>Document</title>
 </head>
@@ -81,7 +114,7 @@
             <div class="col-lg-3 col-md-2 col-sm-0 col-0"></div>
             <div class="col-lg-6 col-md-8 col-sm-12 col-12 bkground">
                 <nav class="navbar p-0 m-0">
-                    <a href="../home.php"><i style="font-size: 40px!important; color:white" class="material-icons-outlined coloricon float-left">keyboard_arrow_left</i> </a>
+                    <a href="../home.php"><i style="font-size: 54px!important; color:white" class="material-icons-outlined coloricon float-left">keyboard_arrow_left</i> </a>
                     <span style="font-weight:bold!important;" class="d-flex justify-content-center">ALL Cap. Banks</span>
                     <button class="navbar-toggler d-flex justify-content-end" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <img id="icon-image" src="../images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="diffImage()"> </button>
@@ -118,13 +151,13 @@
                 </div>
                 <div class="card mt-1" style="background: transparent;">
                     <div class="car-body mx-auto">
-                        <div id="light" class="dot"></div>
+                        <div id="light" class="dot blink"></div>
                     </div>
                 </div>
 
-                <div class="card text-center mt-4 mx-auto" style="width: 80%; height: 200px; background-color:#101E4B">
+                <div class="card text-center mt-4 mx-auto" style="width: 80%; height: 200px; background-color: #041a24;">
                     <div class="card-body m-0 p-0">
-                        <a href="bank2.php" style="font-size: 64px; text-decoration:none; padding-bottom:0%"><strong>122</strong><sub>kvarh</sub></a>
+                        <a href="bank2.php" style="font-size: 64px; color: #26b5e3; text-decoration:none; padding-bottom:0%"><strong>122</strong><sub>kvarh</sub></a>
                         <p class="text mb-0" style="font-size: 36px; font-weight:bold">LAST 1-MONTH </p>
                         <p><span class="text pt-0" style="font-size: 18px; font-weight:lighter">click for details</span></p>
 
@@ -133,7 +166,7 @@
 
                 <div class="card mt-4" style="background: transparent;">
                     <div class="car-body mx-auto">
-                        <div class="text">Rp. 12k</div>
+                        <div class="text" style="font-size: 38px;">Rp. 12k</div>
                     </div>
                 </div>
             </div>

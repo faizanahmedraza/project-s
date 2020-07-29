@@ -43,6 +43,40 @@
       filter: blur(4px);
     }
 
+    .dot.blink {
+      -webkit-animation: blink-animation 1.5s infinite;
+      animation: blink-animation 1.5s infinite;
+    }
+
+    @-webkit-keyframes blink-animation {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes blink-animation {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+
     .wrapper {
       padding: 50px;
       display: flex;
@@ -168,7 +202,7 @@
 
     <div class="card mt-2" style="background: transparent;">
       <div class="car-body mx-auto">
-        <div id="light" class="dot"></div>
+        <div id="light" class="dot blink"></div>
       </div>
     </div>
 
@@ -178,24 +212,24 @@
       <div id="hour-wheel" style="width: 70px;"></div>
       <div id="minute-wheel" style="width: 70px;"></div>
     </div>
-  
 
-  <div class="mt-2">
-    <button type="button" class="form-row mx-auto border-0 text-white font-weight-bold" style="font-size:34px; outline: none; text-shadow:none; cursor: pointer;">SEARCH</button>
-  </div>
+
+    <div class="mt-2">
+      <button type="button" class="form-row mx-auto border-0 text-white font-weight-bold" style="font-size:34px; outline: none; text-shadow:none; cursor: pointer;">SEARCH</button>
+    </div>
 
   </div>
   <footer class="fixed-bottom mb-1">
-        <div class="container">
-            <nav class="navbar d-flex justify-content-center">
-                <a href="../home.php" class="pl-0 icon-image1"><img src="../images/5.png" height="48px" width="48px" alt=""></a>
-                <!--access_time -->
-                <a href="" class="icon-image2" style="padding-left: 40px;"><img src="../images/6.png" height="48px" width="48px" alt=""></a>
-                <a href="../graphBuilder/meter2.php" class="icon-image3" style="padding-left: 40px;"><img src="../images/9.png" height="48px" width="48px" alt=""></a>
-                <a href="../notifications.php" class="icon-image4" style="padding-left: 40px;"><img src="../images/11.png" height="48px" width="48px" alt=""></a>
-            </nav>
-        </div>
-    </footer>
+    <div class="container">
+      <nav class="navbar d-flex justify-content-center">
+        <a href="../home.php" class="pl-0 icon-image1"><img src="../images/5.png" height="48px" width="48px" alt=""></a>
+        <!--access_time -->
+        <a href="" class="icon-image2" style="padding-left: 40px;"><img src="../images/6.png" height="48px" width="48px" alt=""></a>
+        <a href="../graphBuilder/meter2.php" class="icon-image3" style="padding-left: 40px;"><img src="../images/9.png" height="48px" width="48px" alt=""></a>
+        <a href="../notifications.php" class="icon-image4" style="padding-left: 40px;"><img src="../images/11.png" height="48px" width="48px" alt=""></a>
+      </nav>
+    </div>
+  </footer>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

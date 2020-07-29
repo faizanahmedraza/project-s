@@ -57,6 +57,40 @@
             filter: blur(4px);
         }
 
+        
+        .dot.blink {
+            -webkit-animation: blink-animation 1.5s infinite;
+            animation: blink-animation 1.5s infinite;
+        }
+
+        @-webkit-keyframes blink-animation {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes blink-animation {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
         div.card-body {
             padding-bottom: 20px !important;
             padding-top: 5px !important;
@@ -71,7 +105,7 @@
             <div class="col-lg-3 col-md-2 col-sm-0 col-0"></div>
             <div class="col-lg-6 col-md-8 col-sm-12 col-12 bkground">
                 <nav class="navbar p-0 m-0">
-                    <a href="allmeters/allmeter1.php"><i style="font-size: 40px!important; color:white" class="material-icons-outlined coloricon float-left">keyboard_arrow_left</i> </a>
+                    <a href="allmeters/allmeter1.php"><i style="font-size: 54px!important; color:white" class="material-icons-outlined coloricon float-left">keyboard_arrow_left</i> </a>
                     <span style="font-weight:bold!important;" class="d-flex justify-content-center font-weight-bold">Meter2</span>
                     <button class="d-flex justify-content-end" type="button">
                         <img id="icon-image" src="images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('settings.php')">
@@ -102,17 +136,12 @@
                         </div>
                         <div class="swiper-slide active">
                             <button type="button">
-                                <h4 class="meters text-white">VHarm.</h4>
+                                <h4 class="meters text-white">V Harm.</h4>
                             </button>
                         </div>
                         <div class="swiper-slide active">
                             <button type="button">
-                                <h4 class="meters text-white">HHarm.</h4>
-                            </button>
-                        </div>
-                        <div class="swiper-slide active">
-                            <button type="button">
-                                <h4 class="meters text-white">IHarm.</h4>
+                                <h4 class="meters text-white">I Harm.</h4>
                             </button>
                         </div>
                         <div class="swiper-slide active">
@@ -133,7 +162,7 @@
                 <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-6 col-md-4">
-                            <div class="card" style="width: 175px; height: 160px; background-color:#101E4B;">
+                            <div class="card" style="width: 175px; height: 160px; background-color:#041a24;">
                                 <div class="card-body">
                                 <div class="row">
                                         <div class="font-weight-bold" style="font-size: 40px; padding-top:5px;">3rd</div>
@@ -145,7 +174,7 @@
                             </div>
                         </div>
                         <div class="col-6 col-md-4">
-                            <div class="card" style="width: 175px; height: 160px; background-color:#101E4B;">
+                            <div class="card" style="width: 175px; height: 160px; background-color:#041a24;">
                                 <div class="card-body">
                                 <div class="row">
                                         <div class="font-weight-bold" style="font-size: 40px; padding-top:5px;">5th</div>
@@ -161,7 +190,7 @@
                     <div class="row mt-3">
                         <div class="col-md-2"></div>
                         <div class="col-6 col-md-4">
-                            <div class="card" style="width: 175px; height: 160px; background-color:#101E4B;">
+                            <div class="card" style="width: 175px; height: 160px; background-color:#041a24;">
                                 <div class="card-body">
                                 <div class="row">
                                         <div class="font-weight-bold" style="font-size: 40px; padding-top:5px;">7th</div>
@@ -173,7 +202,7 @@
                             </div>
                         </div>
                         <div class="col-6 col-md-4">
-                            <div class="card" style="width: 175px; height: 160px; background-color:#101E4B;">
+                            <div class="card" style="width: 175px; height: 160px; background-color:#041a24;">
                                 <div class="card-body">
                                 <div class="row">
                                         <div class="font-weight-bold" style="font-size: 40px; padding-top:5px;">9th</div>
@@ -271,30 +300,14 @@
             on: {
                 slideChange() {
                     const swiper = this;
-                    if (swiper.activeIndex === 0) {
-                        var url = swiper.$wrapperEl.children('.swiper-slide').eq(swiper.activeIndex);
-                        console.log(url);
-                        window.location = "voltage.php";
-                    } else if (swiper.activeIndex === 1) {
-                        var url = swiper.$wrapperEl.children('.swiper-slide').eq(swiper.activeIndex);
-                        console.log(url);
-                        window.location = "current.php";
-                    } else if (swiper.activeIndex === 2) {
-                        var url = swiper.$wrapperEl.children('.swiper-slide').eq(swiper.activeIndex);
-                        console.log(url);
-                        window.location = "thdi.php";
-                    } else if (swiper.activeIndex === 3) {
+                    if (swiper.activeIndex === 3) {
                         var url = swiper.$wrapperEl.children('.swiper-slide').eq(swiper.activeIndex);
                         console.log(url);
                         window.location = "thdv.php";
-                    } else if (swiper.activeIndex === 6) {
+                    } else if (swiper.activeIndex === 5) {
                         var url = swiper.$wrapperEl.children('.swiper-slide').eq(swiper.activeIndex);
                         console.log(url);
                         window.location = "iharm.php";
-                    } else if (swiper.activeIndex === 7) {
-                        var url = swiper.$wrapperEl.children('.swiper-slide').eq(swiper.activeIndex);
-                        console.log(url);
-                        window.location = "power.php";
                     }
                 }
             }

@@ -44,6 +44,40 @@
       filter: blur(4px);
     }
 
+    .dot.blink {
+      -webkit-animation: blink-animation 1.5s infinite;
+      animation: blink-animation 1.5s infinite;
+    }
+
+    @-webkit-keyframes blink-animation {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes blink-animation {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+
     input[type=text] {
       background: transparent;
       border: none;
@@ -53,11 +87,12 @@
       text-shadow: none;
       outline: none;
     }
+
     input[type=text]:focus,
     input[type=text]:active,
     input[type=text]:invalid,
     input[type=text]:valid,
-    input[type=text]:visited{
+    input[type=text]:visited {
       background: transparent;
       border: none;
       border-bottom: 1px solid white;
@@ -101,7 +136,7 @@
 
     <div class="card mt-2" style="background: transparent;">
       <div class="car-body mx-auto">
-        <div id="light" class="dot"></div>
+        <div id="light" class="dot blink"></div>
       </div>
     </div>
 
@@ -147,7 +182,7 @@
 
     <div class="card mt-2" style="background: transparent;">
       <div class="car-body mx-auto">
-        <div id="light" class="dot"></div>
+        <div id="light" class="dot blink"></div>
       </div>
     </div>
 

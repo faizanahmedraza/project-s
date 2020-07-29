@@ -56,6 +56,40 @@
             filter: blur(4px);
         }
 
+        .dot.blink {
+            -webkit-animation: blink-animation 1.5s infinite;
+            animation: blink-animation 1.5s infinite;
+        }
+
+        @-webkit-keyframes blink-animation {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes blink-animation {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+
         div.card-body {
             padding-bottom: 20px !important;
             padding-top: 5px !important;
@@ -71,7 +105,7 @@
             <div class="col-lg-6 col-md-8 col-sm-12 col-12 bkground">
                 <nav class="navbar p-0 m-0">
                     <a href="../search/finddata.php"><i style="font-size: 40px!important; color:white" class="material-icons-outlined coloricon float-left">keyboard_arrow_left</i> </a>
-                    <div class="d-flex justify-content-center font-weight-bold" style="text-align:center"> Meter2 <br> <?php
+                    <div class="d-flex justify-content-center font-weight-bold" style="text-align:center"> Meter 2 <br> <?php
                                                                                                                         $time = time();
                                                                                                                         $day = date("w", $time);
                                                                                                                         $month = date("m", $time);
@@ -130,7 +164,7 @@
                 </div>
                 <div class="card mt-1" style="background: black;">
                     <div class="car-body mx-auto">
-                        <div id="light" class="dot"></div>
+                        <div id="light" class="dot blink"></div>
                     </div>
                 </div>
 
