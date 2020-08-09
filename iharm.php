@@ -106,7 +106,7 @@
             <div class="col-lg-6 col-md-8 col-sm-12 col-12 bkground">
                 <nav class="navbar p-0 m-0">
                     <a href="allmeters/allmeter1.php"><i style="font-size: 54px!important; color:white" class="material-icons-outlined coloricon float-left">keyboard_arrow_left</i> </a>
-                    <span style="font-weight:bold!important;" class="d-flex justify-content-center font-weight-bold">Meter2</span>
+                    <span style="font-weight:bold!important;" class="d-flex justify-content-center font-weight-bold">Meter 2</span>
                     <button class="d-flex justify-content-end" type="button">
                         <img id="icon-image" src="images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('settings.php')">
                     </button>

@@ -1,3 +1,14 @@
+<?php 
+session_start();
+error_reporting(0);
+if(isset($_GETT['submit'])){
+  require_once('../database/dbconnect.php');
+  $search = $_GET['submit'];
+  $sql = "SELECT * from capsbanks";
+  $result = mysqli_query($conn, $sql);
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -184,17 +195,17 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide text-center">
           <button type="button">
-            <h4 class="meters text-white">Cap. Bank2</h4>
+            <h4 class="meters text-white">Cap. Bank 2</h4>
           </button>
         </div>
         <div class="swiper-slide text-center">
           <button type="button">
-            <h4 class="meters text-white">Cap. Bank3</h4>
+            <h4 class="meters text-white">Cap. Bank 3</h4>
           </button>
         </div>
         <div class="swiper-slide text-center">
           <button type="button">
-            <h4 class="meters text-white">Cap. Bank4</h4>
+            <h4 class="meters text-white">Cap. Bank 4</h4>
           </button>
         </div>
       </div>
@@ -214,15 +225,17 @@
     </div>
   
 
-  <div class="mt-2">
-    <button type="button" class="form-row mx-auto border-0 text-white font-weight-bold" style="font-size:34px; outline: none; text-shadow:none; cursor: pointer;">SEARCH</button>
-  </div>
+    <div class="mt-2">
+      <form action="" method="get">
+        <input type="submit" class="form-row mx-auto border-0 text-white font-weight-bold" style="font-size:34px; outline: none; text-shadow:none; cursor: pointer;" onclick="window.open('../searchview/cap.bank3.php');" value="SEARCH">
+      </form>
+    </div>
 
   </div>
   <footer class="fixed-bottom mb-1">
         <div class="container">
             <nav class="navbar d-flex justify-content-center">
-                <a href="../home.php" class="pl-0 icon-image1"><img src="../images/5.png" height="48px" width="48px" alt=""></a>
+                <a href="../home.php" class="pl-0 icon-image1"><img src="../images/5.png" height="48px" width="48px" alt="" style="background-color: black; z-index: 5;"></a>
                 <!--access_time -->
                 <a href="" class="icon-image2" style="padding-left: 40px;"><img src="../images/6.png" height="48px" width="48px" alt=""></a>
                 <a href="../graphBuilder/meter2.php" class="icon-image3" style="padding-left: 40px;"><img src="../images/9.png" height="48px" width="48px" alt=""></a>

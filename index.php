@@ -44,12 +44,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <style>
     @import url("./css/styles.css");
 
-    .bgcolor {
-      background: url("images/PWADesign.png") !important;
-      background-size: cover !important;
-      width: 100%;
-      height: 700px;
+    body,
+    html {
+      height: 100%!important;
     }
+
+    .bgcolor {
+      background: url("images/PWADesign.png") no-repeat center fixed !important;
+      background-size: cover !important;
+    }
+
     .form-control {
       background-color: transparent !important;
       color: white;
@@ -59,7 +63,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       outline: none !important;
       box-shadow: none;
       text-shadow: none;
+      text-decoration: none;
     }
+
     .form-control:focus {
       background-color: transparent !important;
       color: white;
@@ -69,24 +75,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       outline: none !important;
       box-shadow: none;
       text-shadow: none;
+      text-decoration: none;
     }
+
     input[type=email],
     input[type=email]:focus,
     input[type=email]:visited,
-    input[type=email]:valid{
-      background-color: transparent!important;
+    input[type=email]:valid {
+      background-color: transparent !important;
       color: white;
       border: none;
       border-radius: 0% !important;
       border-bottom: 1px solid #fff !important;
       outline: none !important;
-      box-shadow: none!important;
+      box-shadow: none !important;
       text-shadow: none;
       text-decoration: none;
     }
-
-
-
   </style>
   <title>Document</title>
 </head>
@@ -116,13 +121,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="col-lg-6 col-md-8 col-sm-12 col-12 h-100">
         <div class="login">
           <img src=".\images\SINEL Logo.png" class="rounded mx-auto d-block mt-4" style="height: 100px; width:100px" alt="">
-          <h1 class="text-center text-white mt-5" style="font-size:28px; font-stretch: ultra-expanded!important; letter-spacing: 7px; white-space: nowrap;">LET'S GET STARTED</h1>
+          <h1 class="text-center text-white mt-5" style="font-size:26px; font-stretch: ultra-expanded!important; letter-spacing: 7px; white-space: nowrap;">LET'S GET STARTED</h1>
           <form class="form-group" action="" method="POST">
 
             <input id="email" type="email" name="email" class="form-control border-0 mt-4" placeholder="Email" autocomplete="off">
             <br>
             <div class="input-group">
-              <input type="text" name="passcode" class="form-control border-0" id="password-id" style="font-size:28px;" placeholder="Passcode">
+              <input type="text" name="passcode" class="form-control border-0" id="password-id" style="font-size:28px;" placeholder="Passcode" autocomplete="off">
               <div class="input-group-append">
                 <span id="span" class="input-group-text border-left-0 border-right-0 border-top-0 rounded-0 text-white" style=" border-bottom: 1px solid #fff;"><i id="pass-status" class="material-icons-outlined" style="text-decoration:none; " onclick="showHidePwd()">visibility_off</i></span>
               </div>

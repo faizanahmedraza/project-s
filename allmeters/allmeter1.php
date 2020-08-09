@@ -16,7 +16,7 @@
             padding: 10px !important;
         }
 
-        button>#icon-image {
+        button,.newimage {
             background-color: transparent !important;
             border: none !important;
             outline: none !important;
@@ -101,7 +101,7 @@
                     <a href="../home.php"><i style="font-size: 54px!important; color:white" class="material-icons-outlined coloricon float-left">keyboard_arrow_left</i> </a>
                     <span style="font-weight:bold!important;" class="d-flex justify-content-center">All Meters</span>
                     <button class="d-flex justify-content-end" type="button">
-                        <img id="icon-image" src="../images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('settings.php')"> </button>
+                        <img id="icon-image" src="../images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('../settings.php')"> </button>
                     </button>
                 </nav>
                 <br>

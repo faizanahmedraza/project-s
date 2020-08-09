@@ -101,7 +101,7 @@ $result = mysqli_fetch_assoc($data);
                             <div class="row">
                                 <div class="col-lg-7 col-7">
                                     <div class="pl-2 ml-2 font-weight-bold" style="color: #26b5e3; font-size:26px; letter-spacing: 3px;">kVARh</div>
-                                    <div class="pl-2 ml-2 font-weight-bold" style="letter-spacing: 2px;">Rp. 10k</div>
+                                    <div id="filterStep" class="pl-2 ml-2"></div>
                                 </div>
                                 <div class="col-lg-5 col-5">
                                     <a href="" style="color:white!important;"><img src="images/1.png" height="76px" width="76px" class="mr-3 pt-2" alt=""></a>
@@ -156,6 +156,15 @@ $result = mysqli_fetch_assoc($data);
     <script src="js/swiper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <script>
+        var i = 0;
+        function Step() {
+            if (i < 10) {
+                i = i + 1;
+            }
+            setTimeout("Step()",100);
+           document.getElementById("filterStep").innerHTML = "Rp. " + i + "k";
+        }
+        Step();
         // Swiper js
         var swiper = new Swiper('.swiper-container', {
             effect: 'coverflow',

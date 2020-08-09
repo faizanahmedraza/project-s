@@ -109,7 +109,7 @@
     <div class="container">
       <span style="font-size:36px; font-weight:bold!important;" class="d-flex justify-content-center">Graph Builder</span>
       <button class="navbar-toggler d-flex justify-content-end" type="button">
-        <img id="icon-image" src="../images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('settings.php')"> </button>
+        <img id="icon-image" src="../images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('../settings.php')"> </button>
       </button>
     </div>
   </nav>
@@ -118,17 +118,17 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide text-center">
           <button type="button">
-            <h4 class="meters text-white">Meter1</h4>
+            <h4 class="meters text-white">Meter 1</h4>
           </button>
         </div>
         <div class="swiper-slide text-center">
           <button type="button">
-            <h4 class="meters text-white">Meter2</h4>
+            <h4 class="meters text-white">Meter 2</h4>
           </button>
         </div>
         <div class="swiper-slide text-center">
           <button type="button">
-            <h4 class="meters text-white">Meter4</h4>
+            <h4 class="meters text-white">Meter 4</h4>
           </button>
         </div>
       </div>
@@ -210,7 +210,7 @@
       <!-- <span class="d-flex justify-content-center" style="font-weight:bold!important; text-align: center;">Set <br> Alarms</span> -->
     </div>
   </div>
-  <footer class="fixed-bottom mb-1">
+  <footer class="fixed-bottom mb-1" style="background-color: black;">
     <div class="container">
       <nav class="navbar d-flex justify-content-center">
         <a href="../home.php" class="pl-0 icon-image1"><img src="../images/5.png" height="48px" width="48px" alt=""></a>

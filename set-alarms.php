@@ -9,11 +9,15 @@
     <style>
         @import url("css/styles.css");
 
+        html,
+        body {
+            height: 100% !important;
+        }
+
         .bgcolor {
-            background: url("images/PWADesign.png") !important;
+            background: url("images/PWADesign.png") no-repeat center fixed !important;
             background-size: cover !important;
-            height: 700px;
-            width: 100%;
+            height: 100% !important;
         }
 
         button {
@@ -36,10 +40,10 @@
         }
 
         .col-form-label {
-            padding-top: 0px!important;
-            padding-bottom: 0px!important;
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
             white-space: nowrap;
-            font-size: 24px!important;
+            font-size: 24px !important;
         }
 
 
@@ -89,7 +93,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                    <div class="col-6">
+                        <div class="col-6">
                             <label for="" class="col-6 mb-0 col-form-label text-white pt-0 pb-0 font-weight-bold">Undervoltage</label>
                         </div>
                         <div class="col-6 pt-0 pb-0 mb-0">
@@ -102,8 +106,8 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                    <div class="col-6">
-                            <label for="" class="col-6 mb-0 col-form-label text-white font-weight-bold" >Voltage Unb.</label>
+                        <div class="col-6">
+                            <label for="" class="col-6 mb-0 col-form-label text-white font-weight-bold">Voltage Unb.</label>
                         </div>
                         <div class="col-6 pt-0 pb-0 mb-0">
                             <div class="input-group mb-0">
@@ -115,7 +119,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                    <div class="col-6">
+                        <div class="col-6">
                             <label for="" class="col-6 mb-0 col-form-label text-white font-weight-bold">Current Unb.</label>
                         </div>
                         <div class="col-6 pt-0 pb-0 mb-0">
@@ -128,7 +132,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                    <div class="col-6">
+                        <div class="col-6">
                             <label for="" class="col-6 mb-0 col-form-label text-white font-weight-bold">THDV</label>
                         </div>
                         <div class="col-6 pt-0 pb-0 mb-0">
@@ -141,7 +145,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                    <div class="col-6">
+                        <div class="col-6">
                             <label for="" class="col-6 mb-0 col-form-label text-white font-weight-bold">THDI</label>
                         </div>
                         <div class="col-6 pt-0 pb-0 mb-0">

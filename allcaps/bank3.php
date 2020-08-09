@@ -32,7 +32,7 @@
             <a href="allcaps.php"><i style="font-size: 54px!important; color:white" class="material-icons-outlined coloricon float-left">keyboard_arrow_left</i> </a>
             <span style="font-size: 30px; font-weight:bold!important;" class="d-flex justify-content-center">Bank3</span>
             <button class="navbar-toggler d-flex justify-content-end" type="button">
-                <img id="icon-image" src="../images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('settings.php')"> </button>
+                <img id="icon-image" src="../images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('../settings.php')"> </button>
             </button>
         </div>
     </nav>
@@ -130,7 +130,7 @@
             <nav class="navbar d-flex justify-content-center">
                 <a href="../home.php" class="pl-0 icon-image1"><img src="../images/5.png" height="48px" width="48px" alt=""></a>
                 <!--access_time -->
-                <a href="" class="icon-image2" style="padding-left: 40px;"><img src="../images/6.png" height="48px" width="48px" alt=""></a>
+                <a href="../search/finddata.php" class="icon-image2" style="padding-left: 40px;"><img src="../images/6.png" height="48px" width="48px" alt=""></a>
                 <a href="../graphBuilder/meter2.php" class="icon-image3" style="padding-left: 40px;"><img src="../images/9.png" height="48px" width="48px" alt=""></a>
                 <a href="../notifications.php" class="icon-image4" style="padding-left: 40px;"><img src="../images/11.png" height="48px" width="48px" alt=""></a>
             </nav>

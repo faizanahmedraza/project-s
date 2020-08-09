@@ -1,3 +1,14 @@
+<?php 
+session_start();
+error_reporting(0);
+if(isset($_GETT['submit'])){
+  require_once('../database/dbconnect.php');
+  $search = $_GET['submit'];
+  $sql = "SELECT * from meters";
+  $result = mysqli_query($conn, $sql);
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -174,7 +185,7 @@
     <div class="container">
       <span style="font-size:36px; font-weight:bold!important;" class="d-flex justify-content-center">Find Data</span>
       <button class="navbar-toggler d-flex justify-content-end" type="button">
-        <img id="icon-image" src="../images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('settings.php')"> </button>
+        <img id="icon-image" src="../images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('../settings.php')"> </button>
       </button>
     </div>
   </nav>
@@ -183,17 +194,17 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide text-center">
           <button type="button">
-            <h4 class="meters text-white">Meter2</h4>
+            <h4 class="meters text-white">Meter 2</h4>
           </button>
         </div>
         <div class="swiper-slide text-center">
           <button type="button">
-            <h4 class="meters text-white">Meter3</h4>
+            <h4 class="meters text-white">Meter 3</h4>
           </button>
         </div>
         <div class="swiper-slide text-center">
           <button type="button">
-            <h4 class="meters text-white">Mete4</h4>
+            <h4 class="meters text-white">Meter 4</h4>
           </button>
         </div>
       </div>
@@ -213,12 +224,14 @@
     </div>
   
 
-  <div class="mt-2">
-    <button type="button" class="form-row mx-auto border-0 text-white font-weight-bold" style="font-size:34px; outline: none; text-shadow:none; cursor: pointer;">SEARCH</button>
-  </div>
+    <div class="mt-2">
+      <form action="" method="get">
+        <input type="submit" class="form-row mx-auto border-0 text-white font-weight-bold" style="font-size:34px; outline: none; text-shadow:none; cursor: pointer;" onclick="window.open('../searchview/meter3.php');" value="SEARCH">
+      </form>
+    </div>
 
   </div>
-  <footer class="fixed-bottom mb-1">
+  <footer class="fixed-bottom mb-1" style="background-color: black; z-index: 5;">
         <div class="container">
             <nav class="navbar d-flex justify-content-center">
                 <a href="../home.php" class="pl-0 icon-image1"><img src="../images/5.png" height="48px" width="48px" alt=""></a>

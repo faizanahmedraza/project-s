@@ -30,7 +30,7 @@
     <nav class="navbar p-0 m-0">
         <div class="container">
             <a href="../search/cap.bank1.php"><i style="font-size: 54px!important; color:white" class="material-icons-outlined coloricon float-left">keyboard_arrow_left</i> </a>
-            <span style="font-weight:bold!important; text-align:center" class="d-flex justify-content-center">Bank 1 <br> <?php
+            <span style="font-weight:bold!important; text-align:center" class="d-flex justify-content-center">Bank 4 <br> <?php
                                                                                                                         $time = time();
                                                                                                                         $day = date("w", $time);
                                                                                                                         $month = date("m", $time);

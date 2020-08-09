@@ -1,3 +1,14 @@
+<?php
+session_start();
+error_reporting(0);
+if (isset($_GETT['submit'])) {
+  require_once('../database/dbconnect.php');
+  $search = $_GET['submit'];
+  $sql = "SELECT * from meters";
+  $result = mysqli_query($conn, $sql);
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -29,11 +40,18 @@
       margin-bottom: 0px;
     }
 
-    button {
-      background: transparent;
-      border: none;
-      outline: none;
-    }
+    #image.newimage,
+    #image.newimage:focus-visible,
+    #image.newimage:any-link,
+    #image.newimage:focus,
+    #image.newimage:active,
+    #image.newimage:hover {
+            background-color: transparent!important;
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+            cursor: pointer !important;
+        }
 
     .dot {
       height: 16px;
@@ -42,38 +60,39 @@
       border-radius: 50%;
       filter: blur(4px);
     }
+
     .dot.blink {
-            -webkit-animation: blink-animation 1.5s infinite;
-            animation: blink-animation 1.5s infinite;
-        }
+      -webkit-animation: blink-animation 1.5s infinite;
+      animation: blink-animation 1.5s infinite;
+    }
 
-        @-webkit-keyframes blink-animation {
-            0% {
-                opacity: 0;
-            }
+    @-webkit-keyframes blink-animation {
+      0% {
+        opacity: 0;
+      }
 
-            50% {
-                opacity: 1;
-            }
+      50% {
+        opacity: 1;
+      }
 
-            100% {
-                opacity: 0;
-            }
-        }
+      100% {
+        opacity: 0;
+      }
+    }
 
-        @keyframes blink-animation {
-            0% {
-                opacity: 0;
-            }
+    @keyframes blink-animation {
+      0% {
+        opacity: 0;
+      }
 
-            50% {
-                opacity: 1;
-            }
+      50% {
+        opacity: 1;
+      }
 
-            100% {
-                opacity: 0;
-            }
-        }
+      100% {
+        opacity: 0;
+      }
+    }
 
 
     .wrapper {
@@ -170,12 +189,12 @@
 </head>
 
 <body>
-  <nav class="navbar p-0 m-0">
+  <nav class="navbar p-0 m-0" style="padding-bottom: 0px!important; background-color:black; z-index:10">
     <div class="container">
       <span style="font-size:36px; font-weight:bold!important;" class="d-flex justify-content-center">Find Data</span>
-      <button class="navbar-toggler d-flex justify-content-end" type="button">
-        <img id="icon-image" src="../images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('settings.php')"> </button>
-      </button>
+      <div id="image" class="d-flex justify-content-end" type="button">
+        <img id="icon-image" src="images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('../settings.php');">
+  </div>
     </div>
   </nav>
   <div class="container">
@@ -183,17 +202,17 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide text-center">
           <button type="button">
-            <h4 class="meters text-white">Cap. Bank5</h4>
+            <h4 class="meters text-white">Cap. Bank 5</h4>
           </button>
         </div>
         <div class="swiper-slide text-center">
           <button type="button">
-            <h4 class="meters text-white">Meter1</h4>
+            <h4 class="meters text-white">Meter 1</h4>
           </button>
         </div>
         <div class="swiper-slide text-center">
           <button type="button">
-            <h4 class="meters text-white">Meter2</h4>
+            <h4 class="meters text-white">Meter 2</h4>
           </button>
         </div>
       </div>
@@ -211,24 +230,26 @@
       <div id="hour-wheel" style="width: 70px;"></div>
       <div id="minute-wheel" style="width: 70px;"></div>
     </div>
-  
 
-  <div class="mt-2">
-    <button type="button" class="form-row mx-auto border-0 text-white font-weight-bold" style="font-size:34px; outline: none; text-shadow:none;">SEARCH</button>
-  </div>
+
+    <div class="mt-2">
+      <form action="" method="get">
+        <input type="submit" class="form-row mx-auto border-0 text-white font-weight-bold" style="font-size:34px; outline: none; text-shadow:none; cursor: pointer;" onclick="window.open('../searchview/meter1.php');" value="SEARCH">
+      </form>
+    </div>
 
   </div>
-  <footer class="fixed-bottom mb-1">
-        <div class="container">
-            <nav class="navbar d-flex justify-content-center">
-                <a href="../home.php" class="pl-0 icon-image1"><img src="../images/5.png" height="48px" width="48px" alt=""></a>
-                <!--access_time -->
-                <a href="" class="icon-image2" style="padding-left: 40px;"><img src="../images/6.png" height="48px" width="48px" alt=""></a>
-                <a href="../graphBuilder/meter2.php" class="icon-image3" style="padding-left: 40px;"><img src="../images/9.png" height="48px" width="48px" alt=""></a>
-                <a href="../notifications.php" class="icon-image4" style="padding-left: 40px;"><img src="../images/11.png" height="48px" width="48px" alt=""></a>
-            </nav>
-        </div>
-    </footer>
+  <footer class="fixed-bottom mb-1" style="background-color: black; z-index: 5;">
+    <div class="container">
+      <nav class="navbar d-flex justify-content-center">
+        <a href="../home.php" class="pl-0 icon-image1"><img src="../images/5.png" height="48px" width="48px" alt=""></a>
+        <!--access_time -->
+        <a href="" class="icon-image2" style="padding-left: 40px;"><img src="../images/6.png" height="48px" width="48px" alt=""></a>
+        <a href="../graphBuilder/meter2.php" class="icon-image3" style="padding-left: 40px;"><img src="../images/9.png" height="48px" width="48px" alt=""></a>
+        <a href="../notifications.php" class="icon-image4" style="padding-left: 40px;"><img src="../images/11.png" height="48px" width="48px" alt=""></a>
+      </nav>
+    </div>
+  </footer>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

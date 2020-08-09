@@ -107,7 +107,7 @@
     <div class="container">
       <span style="font-size:36px; font-weight:bold!important;" class="d-flex justify-content-center">Graph Builder</span>
       <button class="navbar-toggler d-flex justify-content-end" type="button">
-        <img id="icon-image" src="../images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('settings.php')"> </button>
+        <img id="icon-image" src="../images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('../settings.php')"> </button>
       </button>
     </div>
   </nav>

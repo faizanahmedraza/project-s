@@ -114,7 +114,7 @@
                                                                                                                         echo $day, "/", $month, " ", $hour, ":", $min;
                                                                                                                         ?> </div>
                     <button class="d-flex justify-content-end" type="button">
-                        <img id="icon-image" src="../images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('settings.php')">
+                        <img id="icon-image" src="../images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('../settings.php')">
                     </button>
                 </nav>
                 <br>
@@ -147,11 +147,6 @@
                         </div>
                         <div class="swiper-slide active">
                             <button type="button">
-                                <h4 class="meters text-white">HHarm.</h4>
-                            </button>
-                        </div>
-                        <div class="swiper-slide active">
-                            <button type="button">
                                 <h4 class="meters text-white">IHarm.</h4>
                             </button>
                         </div>
@@ -172,7 +167,7 @@
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-6 col-md-4">
-                            <div class="card" style="width: 175px; height: 160px; background-color:#101E4B;">
+                            <div class="card" style="width: 175px; height: 160px; background-color: #041a24;">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="font-weight-bold" style="font-size: 42px; padding-top:0px;">R</div>
@@ -184,7 +179,7 @@
                             </div>
                         </div>
                         <div class="col-6 col-md-4">
-                            <div class="card" style="width: 175px; height: 160px; background-color:#101E4B;">
+                            <div class="card" style="width: 175px; height: 160px; background-color: #041a24;">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="font-weight-bold" style="font-size: 42px; padding-top:0px;">S</div>
@@ -201,7 +196,7 @@
                     <div class="row mt-3">
                         <div class="col-md-2"></div>
                         <div class="col-6 col-md-4">
-                            <div class="card" style="width: 175px; height: 160px; background-color:#101E4B;">
+                            <div class="card" style="width: 175px; height: 160px; background-color: #041a24;">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="font-weight-bold" style="font-size: 42px; padding-top:0px;">T</div>
@@ -213,7 +208,7 @@
                             </div>
                         </div>
                         <div class="col-6 col-md-4">
-                            <div class="card" style="width: 175px; height: 160px; background-color:#101E4B;">
+                            <div class="card" style="width: 175px; height: 160px; background-color: #041a24;">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="font-weight-bold" style="font-size: 26px; padding-top:15px;">Unbalance</div>
@@ -237,7 +232,7 @@
                     <a href="../home.php" class="pl-0 icon-image1"><img src="../images/5.png" height="48px" width="48px" alt=""></a>
                     <!--access_time -->
                     <a href="../search/finddata.php" class="icon-image2" style="padding-left: 40px;"><img src="../images/6.png" height="48px" width="48px" alt=""></a>
-                    <a href="#" class="icon-image3" style="padding-left: 40px;"><img src="../images/9.png" height="48px" width="48px" alt=""></a>
+                    <a href="../graphBuilder/meter2.php" class="icon-image3" style="padding-left: 40px;"><img src="../images/9.png" height="48px" width="48px" alt=""></a>
                     <a href="../notifications.php" class="icon-image4" style="padding-left: 40px;"><img src="../images/11.png" height="48px" width="48px" alt=""></a>
                 </nav>
             </div>

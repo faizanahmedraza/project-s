@@ -30,7 +30,7 @@
     <nav class="navbar p-0 m-0">
         <div class="container">
             <a href="../search/cap.bank5.php"><i style="font-size: 40px!important; color:white" class="material-icons-outlined coloricon float-left">keyboard_arrow_left</i> </a>
-            <span style="font-weight:bold!important; text-align:center" class="d-flex justify-content-center">Bank1 <br> <?php
+            <span style="font-weight:bold!important; text-align:center" class="d-flex justify-content-center">Bank 5 <br> <?php
                                                                                                                         $time = time();
                                                                                                                         $day = date("w", $time);
                                                                                                                         $month = date("m", $time);
@@ -39,7 +39,7 @@
                                                                                                                         echo $day, "/", $month, " ", $hour, ":", $min;
                                                                                                                         ?></span>
             <button class="navbar-toggler d-flex justify-content-end" type="button">
-                <img id="icon-image" src="../images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('settings.php')"> </button>
+                <img id="icon-image" src="../images/13.png" class="newimage" height="48px" width="48px" alt="" onclick="window.open('../settings.php')"> </button>
             </button>
         </div>
     </nav>

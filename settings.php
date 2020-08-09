@@ -9,6 +9,11 @@
     <style>
         @import url("css/styles.css");
 
+        body,
+        html {
+            height: 100% !important;
+        }
+
         .navbar {
             padding: 12px 12px;
         }
@@ -18,10 +23,8 @@
         }
 
         .bgcolor {
-            background: url("images/PWADesign.png") !important;
+            background: url("images/PWADesign.png") no-repeat center fixed !important;
             background-size: cover !important;
-            width: 100%;
-            height: 700px;
         }
 
         button#image {

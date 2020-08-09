@@ -10,11 +10,14 @@
     <style>
         @import url("css/styles.css");
 
+        body,
+        html {
+            height: 100% !important;
+        }
+
         .bgcolor {
-            background: url("images/PWADesign.png") !important;
+            background: url("images/PWADesign.png") no-repeat center fixed !important;
             background-size: cover !important;
-            height: 700px;
-            width: 100%;
         }
 
 

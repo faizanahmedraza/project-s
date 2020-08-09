@@ -33,13 +33,15 @@ if (isset($_POST['submit'])) {
     <style>
         @import url("css/styles.css");
 
-        .bgcolor {
-            background: url("images/PWADesign.png") !important;
-            background-size: cover !important;
-            height: 700px;
-            width: 100%;
+        body,
+        html {
+            height: 100% !important;
         }
 
+        .bgcolor {
+            background: url("images/PWADesign.png") no-repeat center fixed !important;
+            background-size: cover !important;
+        }
 
         button {
             background-color: transparent !important;

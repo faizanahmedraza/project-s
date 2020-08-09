@@ -1,14 +1,14 @@
-<?php 
-    session_start();
-    error_reporting(0);
-    $userProfile = $_SESSION['useremail'];
-    if($userProfile =true){} 
-    else {
-        header("location:index.php");
-    }
-    $sql = "select * from login where email = '$userProfile'";
-    $data = mysqli_query($conn, $sql);
-    $result = mysqli_fetch_assoc($data);
+<?php
+session_start();
+error_reporting(0);
+$userProfile = $_SESSION['useremail'];
+if ($userProfile = true) {
+} else {
+    header("location:index.php");
+}
+$sql = "select * from login where email = '$userProfile'";
+$data = mysqli_query($conn, $sql);
+$result = mysqli_fetch_assoc($data);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -101,7 +101,7 @@
                             <div class="row">
                                 <div class="col-lg-7 col-7">
                                     <div class="pl-2 ml-2 font-weight-bold" style="color: #26b5e3; font-size:26px; letter-spacing: 3px;">kWh</div>
-                                    <div class="pl-2 ml-2 font-weight-bold" style="letter-spacing: 2px;">Rp. 231k</div>
+                                    <div id="homeStep" class="pl-2 ml-2"></div>
                                 </div>
                                 <div class="col-lg-5 col-5">
                                     <a href="allmeters/allmeter1.php" style="color:white!important;"><img src="images/2.png" height="76px" width="76px" class="mr-3 pt-2" alt=""></a>
@@ -110,7 +110,7 @@
                             <div class="row">
                                 <div class="container text-center">
                                     <div class="d-flex flex-column">
-                                        <div class="justify-content-center"><b>Meters</b></div>
+                                        <div class="justify-content-center"><b>METERS</b></div>
                                         <div class="justify-content-center" style=" font-size:18px; color:#70747a;">5 meters connected</div>
                                     </div>
                                 </div>
@@ -123,7 +123,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-lg-7 col-7">
-                                <div class="pl-2 ml-2" style="color: #125a70; font-size:26px;">kVARh</div>
+                                    <div class="pl-2 ml-2" style="color: #125a70; font-size:26px;">kVARh</div>
                                     <div class="pl-2 ml-2" style="color:#7e7e7e;">Rp.13k</div>
                                 </div>
                                 <div class="col-lg-5 col-5">
@@ -156,6 +156,15 @@
     <script src="js/swiper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <script>
+        var i = 0;
+        function Step() {
+            if (i < 231) {
+                i = i + 1;
+            }
+            setTimeout("Step()", 5);
+           document.getElementById("homeStep").innerHTML = "Rp. " + i + "k";
+        }
+        Step();
         // Swiper js
         var swiper = new Swiper('.swiper-container', {
             effect: 'coverflow',
@@ -215,7 +224,7 @@
                 }]
             },
             options: {
-                bezierCurve : false,
+                bezierCurve: false,
                 layout: {
                     padding: {
                         left: 20,

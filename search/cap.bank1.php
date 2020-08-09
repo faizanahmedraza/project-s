@@ -1,3 +1,14 @@
+<?php 
+session_start();
+error_reporting(0);
+if(isset($_GETT['submit'])){
+  require_once('../database/dbconnect.php');
+  $search = $_GET['submit'];
+  $sql = "SELECT * from capsbanks";
+  $result = mysqli_query($conn, $sql);
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -184,17 +195,17 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide text-center">
           <button type="button">
-            <h4 class="meters text-white">Meter5</h4>
+            <h4 class="meters text-white">Meter 5</h4>
           </button>
         </div>
         <div class="swiper-slide text-center">
           <button type="button">
-            <h4 class="meters text-white">Cap. Bank1</h4>
+            <h4 class="meters text-white">Cap. Bank 1</h4>
           </button>
         </div>
         <div class="swiper-slide text-center">
           <button type="button">
-            <h4 class="meters text-white">Cap. Bank2</h4>
+            <h4 class="meters text-white">Cap. Bank 2</h4>
           </button>
         </div>
       </div>
@@ -213,13 +224,14 @@
       <div id="minute-wheel" style="width: 70px;"></div>
     </div>
 
-
     <div class="mt-2">
-      <button type="button" class="form-row mx-auto border-0 text-white font-weight-bold" style="font-size:34px; outline: none; text-shadow:none; cursor: pointer;">SEARCH</button>
+      <form action="" method="get">
+        <input type="submit" class="form-row mx-auto border-0 text-white font-weight-bold" style="font-size:34px; outline: none; text-shadow:none; cursor: pointer;" onclick="window.open('../searchview/cap.bank1.php');" value="SEARCH">
+      </form>
     </div>
 
   </div>
-  <footer class="fixed-bottom mb-1">
+  <footer class="fixed-bottom mb-1" style="background-color: black; z-index: 5;">
     <div class="container">
       <nav class="navbar d-flex justify-content-center">
         <a href="../home.php" class="pl-0 icon-image1"><img src="../images/5.png" height="48px" width="48px" alt=""></a>
@@ -255,6 +267,7 @@
       on: {
         slideChange() {
           const swiper = this;
+          console.log(swiper);
           if (swiper.activeIndex === 0) {
             var url = swiper.$wrapperEl.children('.swiper-slide').eq(swiper.activeIndex);
             console.log(url);

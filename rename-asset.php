@@ -29,11 +29,14 @@ if (isset($_POST['submit'])) {
     <style>
         @import url("css/styles.css");
 
+        html, body {
+            height: 100%!important;
+        }
+
         .bgcolor {
-            background: url("images/PWADesign.png") !important;
+            background: url("images/PWADesign.png") no-repeat center fixed !important;
             background-size: cover !important;
-            height: 700px !important;
-            padding: 10px !important;
+            height: 100%!important;
         }
 
         button {
@@ -75,10 +78,10 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid bgcolor">
         <div class="row">
             <div class="col-lg-3 col-md-2 col-sm-0 col-0"></div>
-            <div class="col-lg-6 col-md-8 col-sm-12 col-12 bgcolor">
+            <div class="col-lg-6 col-md-8 col-sm-12 col-12">
                 <nav class="navbar p-0 m-0">
                     <a href="settings.php"><i style="font-size: 40px!important; color:white" class="material-icons-outlined coloricon float-left">keyboard_arrow_left</i> </a>
                     <span style="font-weight:bold!important; text-align:center;" class="d-flex justify-content-center">Rename <br> Assets</span>

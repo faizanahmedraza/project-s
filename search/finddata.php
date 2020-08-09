@@ -1,3 +1,14 @@
+<?php 
+session_start();
+error_reporting(0);
+if(isset($_GETT['submit'])){
+  require_once('../database/dbconnect.php');
+  $search = $_GET['submit'];
+  $sql = "SELECT * from meters";
+  $result = mysqli_query($conn, $sql);
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -184,17 +195,17 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide text-center">
           <button type="button">
-            <h4 class="meters text-white">Meter1</h4>
+            <h4 class="meters text-white">Meter 1</h4>
           </button>
         </div>
         <div class="swiper-slide text-center">
           <button type="button">
-            <h4 class="meters text-white">Meter2</h4>
+            <h4 class="meters text-white">Meter 2</h4>
           </button>
         </div>
         <div class="swiper-slide text-center">
           <button type="button">
-            <h4 class="meters text-white">Mete3</h4>
+            <h4 class="meters text-white">Meter 3</h4>
           </button>
         </div>
       </div>
@@ -215,11 +226,13 @@
 
 
     <div class="mt-2">
-      <button type="button" class="form-row mx-auto border-0 text-white font-weight-bold" style="font-size:34px; outline: none; text-shadow:none; cursor: pointer;" onclick="window.open('../searchview/meter2.php')">SEARCH</button>
+      <form action="" method="get">
+        <input type="submit" class="form-row mx-auto border-0 text-white font-weight-bold" style="font-size:34px; outline: none; text-shadow:none; cursor: pointer;" onclick="window.open('../searchview/meter2.php');" value="SEARCH">
+      </form>
     </div>
 
   </div>
-  <footer class="fixed-bottom mb-1">
+  <footer class="fixed-bottom mb-1" style="background-color: black; z-index: 5;">
     <div class="container">
       <nav class="navbar d-flex justify-content-center">
         <a href="../home.php" class="pl-0 icon-image1"><img src="../images/5.png" height="48px" width="48px" alt=""></a>

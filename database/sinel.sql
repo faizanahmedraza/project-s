@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2020 at 01:31 PM
+-- Generation Time: Aug 04, 2020 at 07:00 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -20,6 +20,20 @@ SET time_zone = "+00:00";
 --
 -- Database: `sinel`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `capsbanks`
+--
+
+CREATE TABLE `capsbanks` (
+  `caps-id` int(11) NOT NULL,
+  `caps-name` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `months` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `rappen` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `energy-saved` varchar(40) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -41,6 +55,20 @@ INSERT INTO `login` (`id`, `email`, `passcode`) VALUES
 (1, 'firstpost@gmail.com', '123'),
 (2, 'secondpost@gmail.com', '12345'),
 (3, 'thirdpost@gmail.com', '12345');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `meters`
+--
+
+CREATE TABLE `meters` (
+  `meter-id` int(11) NOT NULL,
+  `meter-name` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `month` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `rappen` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `energy-cost` varchar(40) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -70,10 +98,26 @@ INSERT INTO `rename-assets` (`asset-id`, `email`, `meter`, `meter2`, `capbank1`,
 --
 
 --
+-- Indexes for table `capsbanks`
+--
+ALTER TABLE `capsbanks`
+  ADD PRIMARY KEY (`caps-id`),
+  ADD UNIQUE KEY `caps-name` (`caps-name`),
+  ADD UNIQUE KEY `months` (`months`);
+
+--
 -- Indexes for table `login`
 --
 ALTER TABLE `login`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `meters`
+--
+ALTER TABLE `meters`
+  ADD PRIMARY KEY (`meter-id`),
+  ADD UNIQUE KEY `meter-name` (`meter-name`),
+  ADD UNIQUE KEY `month` (`month`);
 
 --
 -- Indexes for table `rename-assets`
@@ -90,6 +134,12 @@ ALTER TABLE `rename-assets`
 --
 ALTER TABLE `login`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `meters`
+--
+ALTER TABLE `meters`
+  MODIFY `meter-id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `rename-assets`
